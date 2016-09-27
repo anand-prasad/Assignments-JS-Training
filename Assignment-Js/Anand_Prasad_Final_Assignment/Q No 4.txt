@@ -1,0 +1,14 @@
+Q4) Write a function named NewMethod which will be used as an alternative for javascript new keyword. NewMethod will accept two arguments first is name of the constructor function and second will be parameters to be passed (Parameters can be comma separated or an array).
+The Object created using NewMethod should be exactly same as that of if created with new keyword.
+new keyword should not be used inside NewMethod.
+
+
+
+ function newOperator(Constr, args) {
+        var thisValue = Object.create(Constr.prototype); 
+        var result = Constr.apply(thisValue, args);
+        if (typeof result === 'object' && result !== null) {
+            return result; 
+        }
+        return thisValue;
+    }

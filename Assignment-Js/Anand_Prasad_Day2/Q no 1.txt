@@ -1,0 +1,12 @@
+Q1) Write a program called complexOperations(a)(b)(c) which will return the result of (a*b-c) using a closure.
+e.g - complexOperations(5)(10)(2) will give output 48
+
+
+
+function complexOperations(a) {
+        return function(b){
+            return function(c) {
+                return ((a*b)-c);
+            }
+        }
+    }

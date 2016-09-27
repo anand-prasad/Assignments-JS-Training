@@ -1,0 +1,25 @@
+function Car (color,carName,power,topSpeed) {
+    this.color = color;
+    this.carName = carName;
+    this.power = power;
+    this.topSpeed = topSpeed;
+}
+var marutiBaleno = new Car("Blue",'MarutiBaleno',1248,160);
+var hyundaiElitei20 = new Car("Red","HyundaiElitei20",1366,170);
+var hondaJazz = new Car("Orange","HondaJazz",1496,180);
+
+function compareSpecs(){
+ var carArray = [marutiBaleno,hyundaiElitei20,hondaJazz];
+ return  function(property){
+    carArray.forEach(function(carObj){
+    for(var key in carObj){
+     if(carObj[key] == property) {
+        return carObj
+   }
+}
+ });
+}
+}
+var getSpecs=compareSpecs();
+getSpecs("Orange");
+

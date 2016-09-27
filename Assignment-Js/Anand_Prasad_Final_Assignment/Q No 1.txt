@@ -1,0 +1,7 @@
+Q1) Write a function isPalindrome(str), which takes a string of multiple words and returns a boolean value. Make use of string functions to write this function.
+
+
+
+function isPalindrome(str) {
+    return str == str.split('').reverse().join('');
+}
